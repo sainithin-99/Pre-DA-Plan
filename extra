@@ -1,0 +1,29 @@
+Using the uploaded 2024 Annual Internal Audit Plan PowerPoint, prepare a detailed audit information extraction report for all 35 identified audits (IDs 7–41).
+
+For every audit, extract:
+1. Audit ID
+2. Audit Name
+3. Audit Category (Local / Catalogue / Practice or Trend)
+4. Legal Entity
+5. Audit Objective
+6. Audit Scope
+7. Planned Audit Quarter
+8. Key Business Processes covered
+9. Key Risks or Controls mentioned, if explicitly documented
+10. Source PowerPoint slide number(s)
+
+IMPORTANT:
+- Do not make any DA suitability decisions yet.
+- Do not invent or assume objectives, scope, risks, or controls.
+- Preserve the meaning of the original audit descriptions.
+- If information is unavailable, write 'Not specified in source'.
+- If an audit's information spans multiple slides, consolidate it and reference all relevant slides.
+- Include all 35 audits, without skipping any.
+- Do not treat supporting information as a separate audit.
+
+OUTPUT:
+Create a downloadable Excel workbook with two worksheets:
+1. Audit Master: one row per audit, with all ten fields above.
+2. Extraction Validation: total records identified, records extracted, missing fields, duplicate IDs, missing IDs, and source slide references.
+
+Finally, report whether all 35 audit records were successfully extracted and explain any limitations.
