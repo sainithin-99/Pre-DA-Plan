@@ -1,29 +1,33 @@
-Using the uploaded 2024 Annual Internal Audit Plan PowerPoint, prepare a detailed audit information extraction report for all 35 identified audits (IDs 7–41).
+I want to enhance the output structure and presentation of the DA Audit Screening Agent. Do not change or invent the DA selection methodology. The approved DA selection rules are still pending.
 
-For every audit, extract:
-1. Audit ID
-2. Audit Name
-3. Audit Category (Local / Catalogue / Practice or Trend)
-4. Legal Entity
-5. Audit Objective
-6. Audit Scope
-7. Planned Audit Quarter
-8. Key Business Processes covered
-9. Key Risks or Controls mentioned, if explicitly documented
-10. Source PowerPoint slide number(s)
+Using the previously uploaded 2024 Annual Internal Audit Plan PowerPoint and the extracted audit information, design a professional Excel workbook for the DA team.
 
-IMPORTANT:
-- Do not make any DA suitability decisions yet.
-- Do not invent or assume objectives, scope, risks, or controls.
-- Preserve the meaning of the original audit descriptions.
-- If information is unavailable, write 'Not specified in source'.
-- If an audit's information spans multiple slides, consolidate it and reference all relevant slides.
-- Include all 35 audits, without skipping any.
-- Do not treat supporting information as a separate audit.
+Create these four worksheets:
 
-OUTPUT:
-Create a downloadable Excel workbook with two worksheets:
-1. Audit Master: one row per audit, with all ten fields above.
-2. Extraction Validation: total records identified, records extracted, missing fields, duplicate IDs, missing IDs, and source slide references.
+SHEET 1 — EXECUTIVE SUMMARY
+Include audit population, number of audits reviewed, audit category breakdown, legal entity breakdown, planned quarter breakdown, extraction completeness, and DA selection status summary. Clearly show that DA decisions are pending the approved methodology. Do not show any audit as selected or rejected for DA.
 
-Finally, report whether all 35 audit records were successfully extracted and explain any limitations.
+SHEET 2 — DETAILED AUDIT ASSESSMENT
+Include Audit ID, Audit Name, Audit Category, Legal Entity, Planned Quarter, Audit Objective, Audit Scope, Business Process, Preliminary DA Opportunities, Potential DA Procedures, Potential Data Requirements, DA Selection Status, DA Team Comments, and Final DA Decision.
+
+SHEET 3 — POTENTIAL DA PROCEDURES
+For each audit, separately list potential analytics procedures, the audit objective or scope they relate to, the purpose of the analysis, potential data requirements, and relevant limitations. These must be exploratory suggestions only, not approved DA procedures or confirmed commitments. Do not invent company systems or data availability.
+
+SHEET 4 — SOURCE AND VALIDATION REGISTER
+Include source file, source slide number, audit ID, audit name, extracted information, missing information, extraction status, and validation comments. Include overall record-count reconciliation and duplicate or ambiguous record checks.
+
+OUTPUT DESIGN REQUIREMENTS
+- Create a downloadable Excel workbook (.xlsx).
+- Use professional corporate formatting suitable for an Internal Audit team.
+- Apply clear headers, filters, frozen header rows, readable column widths, and wrapped text.
+- Use consistent audit IDs across all worksheets.
+- Preserve original audit names, objectives, and scope wording wherever possible.
+- Do not remove information from the source.
+- Make the workbook easy for auditors to review and add comments.
+- Clearly distinguish source information, AI-generated exploratory observations, and human decisions.
+- Do not invent missing details or fill gaps using assumptions.
+
+VALIDATION
+Confirm that all 35 identified audits (IDs 7–41) appear in the Detailed Audit Assessment. Check that the executive summary counts reconcile with the detailed assessment. Flag any missing or ambiguous source information.
+
+First explain the proposed workbook structure briefly, then generate the actual Excel workbook if your available tools support it. Do not make DA suitability decisions because the approved selection methodology is not yet available.
