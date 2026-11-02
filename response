@@ -63,3 +63,28 @@ Since the approved DA selection methodology has not yet been provided, all audit
 Sources:
 
 [1] 2024 Internal Audit Plan (for DA planning).pptx
+
+---------------------------------------------------------------------------------
+Your enhanced DA Audit Screening Workbook is ready! Here's what's included:
+
+Sheet 1 — Executive Summary
+Full audit population summary: 35 audits (IDs 7–41), 100% extraction completeness
+Category breakdown: Local (22), Catalogue (8), Practice/Trend (5)
+Legal entity and planned quarter distributions
+DA Selection Status: All 35 audits = "Pending DA Criteria" with prominent notice
+Sheet 2 — Detailed Audit Assessment
+35 rows × 15 columns with all source data, exploratory observations, and decision fields
+Colour-coded headers: Blue (source, cols 1–9) · Amber (AI-exploratory, cols 10–12) · Green (human decisions, cols 13–15)
+Filters, frozen headers, alternating row shading, and text wrapping
+Sheet 3 — Potential DA Procedures
+108 exploratory procedures across all 35 audits (~3–4 per audit)
+Each includes related audit scope area, analysis purpose, data requirements, and limitations
+All marked "Exploratory — Not Approved" with disclaimer notice
+Sheet 4 — Source & Validation Register
+Record-level validation: 33 complete, 2 partial (IDs 39 & 40 — limited Group-defined scope)
+Reconciliation summary confirming cross-sheet ID consistency
+7 documented known limitations
+Key Safeguards ✅
+No DA decisions made — all statuses are "Pending DA Criteria"
+AI-generated exploratory content clearly labelled and separated from source facts
+Blank columns provided for DA Team Comments and Final DA Decision
