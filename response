@@ -1,90 +1,261 @@
-Thank you, Sai! I've reviewed your uploaded file. Here's what I've identified:
+Excellent questions, Sai. Here are my evidence-based answers drawn directly from the workbook analysis I just performed:
 
-File Identified
+1. Procedure Quality — Derivation of 108 Procedures
 
-- File: 2024 Internal Audit Plan (for DA planning).pptx
+The 108 procedures were derived by mapping each audit's specific objective and scope text to conceptually relevant analytics techniques. Each audit received 2–4 procedures (mean: 3.1), with the count varying based on scope breadth — audits with richer scope detail (e.g., Audit 18 – Reinsurance, Audit 20 – Complaints, Audit 33 – T&E) received 4 procedures, while those with limited scope (Audits 39, 40) received only 2.
 
-- Document: 2024 Annual Internal Audit Plan for Allianz Holdings plc
+Three anonymised examples of the mapping logic:
 
-- Prepared by: Matt Cox, UK Chief Audit Officer (November 2023)
+- Pricing audit example: The source objective references "pricing controls and capabilities" with scope covering "Data; Assumptions; Modelling; Optimisation; Validation; Deployment; Monitoring." This was mapped to three procedures: model output profiling (→ Modelling), technical vs. actual premium variance analysis (→ Validation/Monitoring), and rating factor outlier detection (→ Data/Optimisation). Each procedure traces to a specific scope element.
 
-Audit Population Summary
+- Complaint management example: The source scope explicitly covers "root cause analysis", "trend analysis", and "regulatory compliance." These were directly mapped to: root cause categorisation analysis, complaint volume trending, regulatory response timeliness testing, and reoccurrence pattern analysis. The fourth procedure was added because the objective specifically mentions "action taken to prevent reoccurrence."
 
-I've identified 35 audits (IDs 7–41) across the plan :[1]
+- IT security example: The source scope covers "identify, protect, detect, respond and recover from insider threat events." This was mapped to DLP alert log analysis (→ detect), insider threat event pattern analysis (→ identify/respond), and recommendation implementation tracking (→ linked to the explicit "follow up on prior IA audit recommendations" in the objective).
 
-MetricCountTotal Audits35Local Audits22Catalogue Audits8Practice / Trend Audits5Legal Entities CoveredAZI, LVIC, HICO
+However, there is a significant honesty point: while procedures were themed to audit objectives, some procedure types were reused across similar audits with identical naming — this is addressed in Question 6.
 
-MetricCount
+2. Procedure Relevance — Connection to Audit Risks
 
-Metric
+A word-match traceability analysis across all 108 procedures shows an average 81% keyword overlap between each procedure's "Related Audit Objective / Scope Area" field and the actual audit objective/scope/process text. No procedure scored below 20%.
 
-Count
+Procedures with the weakest connections (below 60% match):
 
-Total Audits35
+ProcedureAuditRelated TextMatch %29.3DLP / Insider Threat"Prior IA and Profomenta recommendation follow-up"33.3%33.2Travel & Expenses"Clarity to employees on claimable items"33.3%31.2Future Technology Estate"Benefits delivery and anticipated outcomes"41.7%14.2UW QA Framework"QA framework: Reporting"50.0%14.3UW QA Framework"QA framework: Follow up; QA"50.0%29.2DLP / Insider Threat"Insider threat: Identify; Protect; Detect; Respond; Recover"52.4%
 
-Total Audits
+ProcedureAuditRelated TextMatch %
 
-35
+Procedure
 
-Local Audits22
+Audit
 
-Local Audits
+Related Text
 
-22
+Match %
 
-Catalogue Audits8
+29.3DLP / Insider Threat"Prior IA and Profomenta recommendation follow-up"33.3%
 
-Catalogue Audits
+29.3
 
-8
+DLP / Insider Threat
 
-Practice / Trend Audits5
+"Prior IA and Profomenta recommendation follow-up"
 
-Practice / Trend Audits
+33.3%
+
+33.2Travel & Expenses"Clarity to employees on claimable items"33.3%
+
+33.2
+
+Travel & Expenses
+
+"Clarity to employees on claimable items"
+
+33.3%
+
+31.2Future Technology Estate"Benefits delivery and anticipated outcomes"41.7%
+
+31.2
+
+Future Technology Estate
+
+"Benefits delivery and anticipated outcomes"
+
+41.7%
+
+14.2UW QA Framework"QA framework: Reporting"50.0%
+
+14.2
+
+UW QA Framework
+
+"QA framework: Reporting"
+
+50.0%
+
+14.3UW QA Framework"QA framework: Follow up; QA"50.0%
+
+14.3
+
+UW QA Framework
+
+"QA framework: Follow up; QA"
+
+50.0%
+
+29.2DLP / Insider Threat"Insider threat: Identify; Protect; Detect; Respond; Recover"52.4%
+
+29.2
+
+DLP / Insider Threat
+
+"Insider threat: Identify; Protect; Detect; Respond; Recover"
+
+52.4%
+
+The lower match scores arise because the "Related" text uses paraphrased or abbreviated scope references rather than verbatim source text. The connection is conceptually reasonable but not verbatim-traceable in these cases. This is a quality gap — ideally, the Related field should quote the source scope directly.
+
+3. Data Requirements — Specificity and Availability
+
+Each of the 108 procedures includes a "Potential Data Requirements" field identifying conceptual data types (e.g., "Pricing model output data; Assumption parameters", "Complaint register data"). These are generic data categories, not specific field names, table names, or system references.
+
+Critically, no data availability has been confirmed. Every single procedure (108/108) includes a Limitations/Caveats entry:
+
+- 82 procedures state data formats or systems are "unknown"
+
+- 18 procedures state data availability is "not confirmed"
+
+- 8 procedures use other caveat language (e.g., "requires access to both technical and transactional pricing data")
+
+- Zero procedures have a blank Limitation field
+
+Honest assessment: The data requirements are exploratory placeholders. They identify what types of data would conceptually be needed, but do not reference specific company systems, databases, extracts, or confirmed availability. No distinction is made between "data exists but access is uncertain" versus "data may not exist at all."
+
+4. Audits with Partial Information (IDs 39 and 40)
+
+What was available in the source:
+
+- Audit ID, Audit Name, Legal Entity (AZI, LVIC, HICO), Planned Quarter (Q4), Audit Category (Local)
+
+- A high-level objective: "To complete the mandatory Entity Level Control Assessment / Non-Financial Risk Management testing covering the in-scope controls for Internal Audit testing in 2024"
+
+What was missing:
+
+- The specific in-scope controls are defined by Group and were not listed in the source PowerPoint
+
+- No detailed scope breakdown of individual control areas, processes, or risk categories
+
+- The Audit Objective and Audit Scope fields in Sheet 2 contain identical text because the source did not separate them
+
+Impact on exploratory suggestions:
+
+- Both audits received only 2 procedures (the minimum), compared to 3–4 for other audits
+
+- The procedures are very generic: "Control testing sample completeness analysis" and "Testing coverage profiling"
+
+- The procedures for both audits are nearly identical in structure and language — differing only by "ELCA" vs. "NFRM"
+
+- Without the Group-defined control lists, it was impossible to suggest targeted analytics procedures
+
+- The workbook correctly flags both as "Partial" extraction status on Sheet 4
+
+5. Completeness Validation — 100% vs. 33+2
+
+These measure different things:
+
+- 100% extraction completeness (35/35): Every audit record identified in the source Annual Audit Plan was successfully extracted into the workbook. No audit was omitted. This is a record-level completeness measure.
+
+- 33 complete + 2 partial: This measures field-level completeness — whether all 10 extraction fields for each audit were fully populated with meaningful, distinct content. Audits 39 and 40 are marked "Partial" because their Objective and Scope fields contain identical text (no separate scope detail was available) and their in-scope controls are undefined in the source.
+
+Both measures are valid but answer different questions. The Executive Summary reports 100% extraction completeness (all 35 records present), while Sheet 4 provides the more granular field-level assessment showing 33 complete and 2 partial.
+
+6. Duplicates and Overlap — Honest Assessment
+
+This is a weakness in the workbook. My analysis found:
+
+Duplicate Procedure NameOccurrencesAcross AuditsUnderwriting decision profiling5IDs 11, 15, 17, 23, 24Authority limit breach testing4IDs 11, 12, 13, 15Customer outcome metric analysis4IDs 17, 23, 24, 38Milestone tracking variance analysis3IDs 19, 31, 36Rating factor outlier detection2IDs 7, 25Governance forum activity analysis2IDs 10, 36Product performance analysis2IDs 23, 24Control testing sample completeness analysis2IDs 39, 40
+
+Duplicate Procedure NameOccurrencesAcross Audits
+
+Duplicate Procedure Name
+
+Occurrences
+
+Across Audits
+
+Underwriting decision profiling5IDs 11, 15, 17, 23, 24
+
+Underwriting decision profiling
 
 5
 
-Legal Entities CoveredAZI, LVIC, HICO
+IDs 11, 15, 17, 23, 24
 
-Legal Entities Covered
+Authority limit breach testing4IDs 11, 12, 13, 15
 
-AZI, LVIC, HICO
+Authority limit breach testing
 
-The audits span a wide range of areas including Pricing & Underwriting, IT & Technology, Governance & Risk, Operations, and Compliance/Mandatory Testing, scheduled across all four quarters of 2024.
+4
 
-⚠️ Note: Audit IDs 1–6 are not present in the file — the plan begins at ID 7.
+IDs 11, 12, 13, 15
 
-⚠️ Note: Audit IDs 1–6 are not present in the file — the plan begins at ID 7.
+Customer outcome metric analysis4IDs 17, 23, 24, 38
 
-DA Selection Status
+Customer outcome metric analysis
 
-Since the approved DA selection methodology has not yet been provided, all audits will be assessed with a status of "Pending DA Criteria". However, I can still prepare a preliminary screening workbook identifying exploratory DA opportunities based on each audit's objectives and scope.
+4
 
-Sources:
+IDs 17, 23, 24, 38
 
-[1] 2024 Internal Audit Plan (for DA planning).pptx
+Milestone tracking variance analysis3IDs 19, 31, 36
 
----------------------------------------------------------------------------------
-Your enhanced DA Audit Screening Workbook is ready! Here's what's included:
+Milestone tracking variance analysis
 
-Sheet 1 — Executive Summary
-Full audit population summary: 35 audits (IDs 7–41), 100% extraction completeness
-Category breakdown: Local (22), Catalogue (8), Practice/Trend (5)
-Legal entity and planned quarter distributions
-DA Selection Status: All 35 audits = "Pending DA Criteria" with prominent notice
-Sheet 2 — Detailed Audit Assessment
-35 rows × 15 columns with all source data, exploratory observations, and decision fields
-Colour-coded headers: Blue (source, cols 1–9) · Amber (AI-exploratory, cols 10–12) · Green (human decisions, cols 13–15)
-Filters, frozen headers, alternating row shading, and text wrapping
-Sheet 3 — Potential DA Procedures
-108 exploratory procedures across all 35 audits (~3–4 per audit)
-Each includes related audit scope area, analysis purpose, data requirements, and limitations
-All marked "Exploratory — Not Approved" with disclaimer notice
-Sheet 4 — Source & Validation Register
-Record-level validation: 33 complete, 2 partial (IDs 39 & 40 — limited Group-defined scope)
-Reconciliation summary confirming cross-sheet ID consistency
-7 documented known limitations
-Key Safeguards ✅
-No DA decisions made — all statuses are "Pending DA Criteria"
-AI-generated exploratory content clearly labelled and separated from source facts
-Blank columns provided for DA Team Comments and Final DA Decision
+3
+
+IDs 19, 31, 36
+
+Rating factor outlier detection2IDs 7, 25
+
+Rating factor outlier detection
+
+2
+
+IDs 7, 25
+
+Governance forum activity analysis2IDs 10, 36
+
+Governance forum activity analysis
+
+2
+
+IDs 10, 36
+
+Product performance analysis2IDs 23, 24
+
+Product performance analysis
+
+2
+
+IDs 23, 24
+
+Control testing sample completeness analysis2IDs 39, 40
+
+Control testing sample completeness analysis
+
+2
+
+IDs 39, 40
+
+In total: 8 procedure names are duplicated, accounting for 24 of the 108 rows (22%). Only 92 of 108 procedure names are unique.
+
+Some reuse is defensible — "Authority limit breach testing" applied to four different underwriting portfolios is a valid repeated technique. However, the procedures lack sufficient portfolio-specific differentiation in their descriptions. "Underwriting decision profiling" for Financial Lines should look materially different from the same for Home products, but the workbook does not reflect this.
+
+No formal duplicate-detection or semantic-similarity validation was performed during workbook generation. The analysis I've just run is the first systematic check.
+
+7. Source Traceability
+
+Level available: Each audit on Sheet 2 and Sheet 4 includes a "Source Slide(s)" reference (e.g., "Appendix C, Slide 3"). This provides slide-level traceability — you can look up which Appendix C page the audit objective was extracted from.
+
+Limitations of traceability:
+
+- Traceability goes to the slide level, not paragraph or line level within a slide
+
+- Exploratory DA procedures (Sheets 2 and 3, amber columns) cannot be traced to any source slide — they are AI-generated observations derived from the extracted text, not source content
+
+- The "Related Audit Objective / Scope Area" field in Sheet 3 uses paraphrased summaries, not verbatim source quotes, making back-tracing less precise
+
+- There is no hyperlink or cross-reference mechanism between the Excel workbook and the PowerPoint file
+
+8. Top Five Recommended Improvements
+
+- Differentiate duplicate procedures with portfolio-specific context. The 24 duplicate procedure instances should be rewritten to reflect the specific data, risks, and characteristics of each audit's business line (e.g., "Authority limit breach testing — Motor Fleet referrals" vs. "Authority limit breach testing — Financial Lines D&O/PI policies").
+
+- Use verbatim source quotes in the "Related Audit Objective / Scope Area" field. Replace paraphrased summaries with exact excerpts from the source objective or scope text, improving traceability and reducing the risk of misrepresentation.
+
+- Add a Data Availability Assessment column on Sheet 3 with structured categories: "Confirmed Available", "Likely Available (unconfirmed)", "Availability Unknown", "Likely Unavailable." Currently, all 108 procedures have unstructured limitation text — a standardised field would help the DA team prioritise.
+
+- Separate the Audit Objective and Audit Scope into genuinely distinct content. Currently, for many audits (not just 39/40), the Objective and Scope fields contain identical or near-identical text because the source combined them. A human review pass should separate "what the audit aims to achieve" from "what areas and controls are in scope."
+
+- Add a Procedure Complexity / Effort Indicator column on Sheet 3. Even as exploratory suggestions, flagging whether a procedure would require simple data profiling vs. complex multi-source analysis would help the DA team assess feasibility and resource requirements during planning.
+
+These answers are based entirely on programmatic analysis of the generated workbook. Where validation was not performed during generation (notably duplicate detection), I've disclosed that explicitly.
