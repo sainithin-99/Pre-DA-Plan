@@ -31,3 +31,32 @@ VALIDATION
 Confirm that all 35 identified audits (IDs 7–41) appear in the Detailed Audit Assessment. Check that the executive summary counts reconcile with the detailed assessment. Flag any missing or ambiguous source information.
 
 First explain the proposed workbook structure briefly, then generate the actual Excel workbook if your available tools support it. Do not make DA suitability decisions because the approved selection methodology is not yet available.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Review the DA Audit Screening Workbook you just generated. I cannot share the workbook externally, so answer these questions based on your generated workbook and your own processing records. Do not regenerate or modify the workbook yet.
+
+1. PROCEDURE QUALITY
+How did you derive the 108 potential DA procedures? Were they individually mapped to each audit's specific objectives and scope, or were generic procedures reused? Give three anonymized examples of the mapping logic, without revealing confidential audit information.
+
+2. PROCEDURE RELEVANCE
+How did you ensure each proposed procedure addresses an actual audit risk, objective, scope area, or control? Identify any procedures where the connection is weak or uncertain.
+
+3. DATA REQUIREMENTS
+For each proposed procedure, did you identify specific data fields or datasets needed? Did you distinguish confirmed data availability from assumed or unknown availability?
+
+4. AUDITS WITH PARTIAL INFORMATION
+For Audit IDs 39 and 40, explain which information was available, which information was missing, and how that affected the exploratory suggestions. Do not infer missing scope.
+
+5. COMPLETENESS VALIDATION
+Explain the difference between 100% extraction completeness and 33 complete plus 2 partial audit records. Confirm how you counted these measures.
+
+6. DUPLICATES AND OVERLAP
+Did you check whether multiple procedures are substantially similar, duplicated, or overlapping across the audits? Describe the validation performed.
+
+7. SOURCE TRACEABILITY
+Can each audit objective, scope, and exploratory suggestion be traced back to the relevant PowerPoint slide? Explain the level of traceability actually available.
+
+8. OUTPUT IMPROVEMENTS
+Identify the five most useful improvements you recommend for the next version of the workbook, considering audit usability, quality, traceability, and human review.
+
+Provide evidence-based answers. If you cannot verify something from your processing records, explicitly say so. Do not claim validation that was not performed.
