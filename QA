@@ -49,3 +49,8 @@ df["Sentiment"].value_counts().plot(kind="bar", title="Sentiment Distribution")
 
 df.to_excel(output_file, index=False)
 print("Saved to", output_file)
+
+----------------------------------------
+output_df = df[[column_name, "Sentiment_Score", "Sentiment"]]
+output_df.to_excel(output_file, index=False)
+print("Saved to", output_file)
