@@ -1,46 +1,40 @@
 !pip install transformers torch
 
-from transformers import pipeline
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import pandas as pd
+import re
 
-sentiment_model = pipeline(
-    "sentiment-analysis",
-    model="cardiffnlp/twitter-roberta-base-sentiment-latest",
-    top_k=None,          # return probabilities for all 3 labels
-    truncation=True,
-    max_length=512
-)
+analyzer = SentimentIntensityAnalyzer()
 
-texts = df[column_name].astype(str).tolist()
+# 1. Words that are neutral in feedback context (add yours as you spot them)
+for w in ["issue", "issues", "problem", "problems", "delay", "delayed",
+          "concern", "concerns", "complaint", "complaints", "error", "errors"]:
+    analyzer.lexicon[w] = 0
 
-results = sentiment_model(texts, batch_size=16)
+# 2. Phrases VADER misreads: rewrite them before scoring
+phrase_fixes = {
+    r"\bno (issue|issues|problem|problems|complaint|complaints|concern|concerns)\b": "all good",
+    r"\bnot bad\b": "good",
+    r"\bnothing to complain\b": "all good",
+    r"\bno (delay|delays)\b": "on time",
+    r"\bresolved\b": "resolved well",
+}
 
-labels, scores = [], []
-for r in results:
-    probs = {x["label"].lower(): x["score"] for x in r}
-    labels.append(max(probs, key=probs.get).capitalize())          # Positive / Neutral / Negative
-    scores.append(round(probs["positive"] - probs["negative"], 3))  # -1 to +1
+def clean_for_scoring(text):
+    text = str(text).lower()
+    for pattern, replacement in phrase_fixes.items():
+        text = re.sub(pattern, replacement, text)
+    return text
 
-df["Sentiment_Score"] = scores
-df["Sentiment"] = labels
+def get_sentiment(text):
+    score = analyzer.polarity_scores(clean_for_scoring(text))["compound"]
+    if score >= 0.25:
+        label = "Positive"
+    elif score <= -0.25:
+        label = "Negative"
+    else:
+        label = "Neutral"
+    return pd.Series([score, label])
 
-df[[column_name, "Sentiment_Score", "Sentiment"]].head(10)
-
+df[["Sentiment_Score", "Sentiment"]] = df[column_name].apply(get_sentiment)
 print(df["Sentiment"].value_counts())
-
-output_df = df[[column_name, "Sentiment_Score", "Sentiment"]]
-output_df.to_excel(output_file, index=False)
-print("Saved to", output_file)
-
---------------------------------------------
- cannot import name 'TypeIs' from 'typing_extensions' (/opt/conda/lib/python3.10/site-packages/typing_extensions.py)
-
-
-import requests
-for url in ["https://pypi.org", "https://huggingface.co"]:
-    try:
-        print(url, requests.get(url, timeout=10).status_code)
-    except Exception as e:
-        print(url, "BLOCKED:", type(e).__name__)
-
-https://pypi.org 200
-https://huggingface.co BLOCKED: SSLError
