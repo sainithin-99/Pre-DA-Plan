@@ -41,3 +41,6 @@ for url in ["https://pypi.org", "https://huggingface.co"]:
         print(url, requests.get(url, timeout=10).status_code)
     except Exception as e:
         print(url, "BLOCKED:", type(e).__name__)
+
+https://pypi.org 200
+https://huggingface.co BLOCKED: SSLError
