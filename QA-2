@@ -36,5 +36,9 @@ def get_sentiment(text):
         label = "Neutral"
     return pd.Series([score, label])
 
+
+output_df = df[[column_name, "Sentiment_Score", "Sentiment"]]
+output_df.to_excel(output_file, index=False)
+
 df[["Sentiment_Score", "Sentiment"]] = df[column_name].apply(get_sentiment)
 print(df["Sentiment"].value_counts())
