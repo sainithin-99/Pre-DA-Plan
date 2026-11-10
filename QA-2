@@ -33,3 +33,11 @@ print("Saved to", output_file)
 
 --------------------------------------------
  cannot import name 'TypeIs' from 'typing_extensions' (/opt/conda/lib/python3.10/site-packages/typing_extensions.py)
+
+
+import requests
+for url in ["https://pypi.org", "https://huggingface.co"]:
+    try:
+        print(url, requests.get(url, timeout=10).status_code)
+    except Exception as e:
+        print(url, "BLOCKED:", type(e).__name__)
