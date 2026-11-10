@@ -1,0 +1,51 @@
+!pip install pandas openpyxl vaderSentiment
+
+file_path   = "feedback.xlsx"       # path to your Excel file
+sheet_name  = "Sheet1"              # tab name (or a number like 0 for the first tab)
+column_name = "Feedback"            # column containing the feedback text
+output_file = "feedback_sentiment.xlsx"
+
+import pandas as pd
+
+# See all tab names in the file
+xls = pd.ExcelFile(file_path)
+print("Available tabs:", xls.sheet_names)
+
+# Load the chosen tab
+df = pd.read_excel(file_path, sheet_name=sheet_name)
+print("Total rows:", len(df))
+df.head()
+
+# Convert to string, strip spaces, treat empty strings as missing
+df[column_name] = df[column_name].astype("string").str.strip()
+df[column_name] = df[column_name].replace("", pd.NA)
+
+before = len(df)
+df = df.dropna(subset=[column_name]).reset_index(drop=True)
+print(f"Removed {before - len(df)} blank rows, {len(df)} remaining")
+
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+analyzer = SentimentIntensityAnalyzer()
+
+def get_sentiment(text):
+    score = analyzer.polarity_scores(str(text))["compound"]
+    if score >= 0.05:
+        label = "Positive"
+    elif score <= -0.05:
+        label = "Negative"
+    else:
+        label = "Neutral"
+    return pd.Series([score, label])
+
+df[["Sentiment_Score", "Sentiment"]] = df[column_name].apply(get_sentiment)
+df[[column_name, "Sentiment_Score", "Sentiment"]].head(10)
+
+print(df["Sentiment"].value_counts())
+print()
+print(df["Sentiment"].value_counts(normalize=True).mul(100).round(1).astype(str) + "%")
+
+df["Sentiment"].value_counts().plot(kind="bar", title="Sentiment Distribution")
+
+df.to_excel(output_file, index=False)
+print("Saved to", output_file)
